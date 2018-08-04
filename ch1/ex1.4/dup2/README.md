@@ -2,17 +2,17 @@ Input from STDIN.
 
 ```
 $ echo 'foo
-quote> bar
-quote> baz
-quote> foo' | go run ch1/ex1.4/dup2/main.go
-2       foo
+bar
+baz
+foo' | go run ch1/ex1.4/dup2/main.go
+2       foo     /dev/stdin
 ```
 
 Input from files.
 
 ```
-$ go run ch1/ex1.4/dup2/main.go sample1.txt sample2.txt
-4       foo
-3       bar
-2       baz
+gopl-book-exercise (master) $ go run ch1/ex1.4/dup2/main.go sample1.txt sample2.txt
+4       foo     sample1.txt,sample2.txt
+3       bar     sample1.txt,sample2.txt
+2       baz     sample1.txt,sample2.txt
 ```
