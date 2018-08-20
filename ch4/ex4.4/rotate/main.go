@@ -18,6 +18,9 @@ func rotate(s []int, n int) []int {
 	return s[n:]
 }
 
+// Rotate s left by n positions.
+// We move each value directly to the correct position.
+// ref: https://leetcode.com/problems/rotate-array/solution/
 func rotate2(s []int, n int) {
 	n = n % len(s)
 	for start, count := 0, 0; count < len(s); start++ {
