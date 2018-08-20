@@ -10,10 +10,6 @@ func main() {
 
 // Rotate s left by n positions.
 func rotate(s []int, n int) []int {
-	for i, v := range s {
-		if i < n {
-			s = append(s, v)
-		}
-	}
+	s = append(s, s[0:n]...)
 	return s[n:]
 }
